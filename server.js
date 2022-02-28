@@ -21,6 +21,10 @@ app.get("/say", async (req, res) => {
     }
 });
 
+app.get("/", (req,res) => {
+  res.send('Hi, append /say?keyword=value for invoking the lambda function');
+});
+
 app.listen(port, () => {
     console.log(` Express app listening at http://localhost:${port}`)
     });
